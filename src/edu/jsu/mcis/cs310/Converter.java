@@ -91,13 +91,13 @@ public class Converter {
             JsonArray prodNums = new JsonArray();
             JsonArray data = new JsonArray();
             
-            // Extract Column Headings (The first row at index 0)
+            // Extract Column Headings 
             String[] headerRow = fullCsvData.get(0);
             for (String heading : headerRow) {
                 colHeadings.add(heading);
             }
             
-            // Process Data Rows (Loop starting from index 1)
+            // Process Data Rows 
             for (int i = 1; i < fullCsvData.size(); i++) {
                 String[] row = fullCsvData.get(i);
 
@@ -146,7 +146,7 @@ public class Converter {
             JsonArray prodNums = (JsonArray) json.get("ProdNums");
             JsonArray data = (JsonArray) json.get("Data");
             
-            // reate a list of String arrays for the CSV writer
+            // create a list of String arrays for the CSV writer
             List<String[]> csvRows = new ArrayList<>();
             
             // Add the Column Headings as the first row
